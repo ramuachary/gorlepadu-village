@@ -146,6 +146,22 @@ header .navlinks{margin-left:auto}
 .nearby-places{background:#f1efe5}
 .nearby-places .sectionhead{display:block}
 .nearby-places .sectionhead .section-subtitle{max-width:none;width:100%;margin:14px 0 0;line-height:1.85}
+.highway-story{margin-top:24px;padding:clamp(22px,3vw,34px);background:var(--white);border-left:4px solid var(--rust);box-shadow:0 12px 30px #20271f0c}
+.highway-story h3{font:clamp(24px,3vw,32px)/1.3 Georgia,"Noto Serif Telugu",serif;margin:8px 0 12px;color:var(--green)}
+.highway-story p{max-width:1000px;color:var(--muted);line-height:1.85;margin:0 0 10px}
+.highway-story p:last-child{margin-bottom:0}
+.route-journey{display:grid;gap:16px;margin-top:34px}
+.route-journey-heading{padding:0 0 8px}
+.route-journey-heading h3{font:clamp(26px,3.5vw,38px)/1.25 Georgia,"Noto Serif Telugu",serif;color:var(--ink);margin:8px 0 0}
+.route-stop{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);align-items:stretch;background:var(--white);border:1px solid var(--line);box-shadow:0 10px 24px #20271f0b;overflow:hidden}
+.route-stop:nth-of-type(even) .route-stop-media{order:2}
+.route-stop-media{min-width:0;min-height:100%;background:#dfe5d8}
+.route-stop-media img{display:block;width:100%;height:100%;min-height:220px;max-height:360px;aspect-ratio:2.15/1;object-fit:cover}
+.route-stop-copy{align-self:center;padding:clamp(20px,3vw,34px)}
+.route-step-number{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--green);color:#fff;font-size:13px;font-weight:800;margin-bottom:10px}
+.route-stop-copy h4{font:clamp(21px,2.4vw,27px)/1.35 Georgia,"Noto Serif Telugu",serif;color:var(--green);margin:0 0 9px}
+.route-stop-copy p{color:var(--muted);font-size:15px;line-height:1.8;margin:0 0 9px}
+.route-stop-copy p:last-child{margin-bottom:0}
 .nearby-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 .nearby-card{padding:30px 32px;background:var(--white);border:1px solid var(--line);border-top:3px solid var(--green);box-shadow:0 12px 30px #20271f0c;overflow:hidden}
 .nearby-card-image{display:block;width:calc(100% + 64px);height:clamp(220px,28vw,340px);object-fit:cover;margin:-30px -32px 24px}
@@ -153,3 +169,17 @@ header .navlinks{margin-left:auto}
 .nearby-card h3{font:clamp(22px,2.5vw,28px)/1.3 Georgia,"Noto Serif Telugu",serif;margin:0 0 12px;color:var(--green)}
 .nearby-card p{font-size:16px;line-height:1.85;color:var(--muted);margin:0}
 @media(max-width:760px){.nearby-grid{grid-template-columns:1fr}.nearby-card{padding:24px}.nearby-card-image{width:calc(100% + 48px);height:240px;margin:-24px -24px 22px}}
+@media(max-width:760px){.route-stop{grid-template-columns:1fr}.route-stop:nth-of-type(even) .route-stop-media{order:0}.route-stop-media img{height:auto;min-height:0;max-height:none;aspect-ratio:16/9}.route-stop-copy{padding:22px}}
+
+
+/* Flowing, curved route cards */
+.route-journey{gap:22px}
+.route-stop{border-radius:30px 12px 30px 12px;transition:transform .28s ease,box-shadow .28s ease}
+.route-stop:nth-of-type(odd){margin-right:clamp(0px,2.4vw,30px);border-radius:34px 12px 34px 12px}
+.route-stop:nth-of-type(even){margin-left:clamp(0px,2.4vw,30px);border-radius:12px 34px 12px 34px}
+.route-stop:hover{transform:translateY(-3px);box-shadow:0 16px 32px #20271f16}
+.route-stop-media img{transition:transform .45s ease}
+.route-stop:hover .route-stop-media img{transform:scale(1.015)}
+@media(max-width:760px){.route-journey{gap:18px}.route-stop:nth-of-type(odd),.route-stop:nth-of-type(even){margin-inline:0;border-radius:24px 10px 24px 10px}.route-stop:hover{transform:none}.route-stop:hover .route-stop-media img{transform:none}}
+@media(prefers-reduced-motion:reduce){.route-stop,.route-stop-media img{transition:none}.route-stop:hover .route-stop-media img{transform:none}}
+.tootipuram-stories{display:grid;gap:16px;margin-top:24px}.tootipuram-story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(18px,3vw,32px);padding:14px;background:#f8f7f1;border:1px solid var(--line);border-radius:18px}.tootipuram-story:nth-child(even) img{order:2}.tootipuram-story img{display:block;width:100%;height:100%;min-height:190px;max-height:280px;object-fit:cover;border-radius:12px}.tootipuram-story h4{font:clamp(20px,2.2vw,26px)/1.35 Georgia,"Noto Serif Telugu",serif;color:var(--green);margin:0 0 8px}.tootipuram-story p{color:var(--muted);line-height:1.8;margin:0 0 8px}.tootipuram-story p:last-child{margin-bottom:0}@media(max-width:760px){.tootipuram-story{grid-template-columns:1fr;gap:14px}.tootipuram-story:nth-child(even) img{order:0}.tootipuram-story img{min-height:0;aspect-ratio:16/9}}
